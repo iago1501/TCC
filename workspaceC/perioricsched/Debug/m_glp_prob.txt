@@ -1,0 +1,93 @@
+\* Problem: Find set of feasible offsets for each task *\
+
+Minimize
+ There_is_no_optimization_goal: 0 offset_0
+
+Subject To
+ offset_1_offset_0_feasibility: + m_1_0_range + 15 n_1_0_range
+ - offset_1 + offset_0 = 0
+ offset_2_offset_0_feasibility: + m_2_0_range + 45 n_2_0_range
+ - offset_2 + offset_0 = 0
+ offset_2_offset_1_feasibility: + m_2_1_range + 15 n_2_1_range
+ - offset_2 + offset_1 = 0
+ offset_3_offset_0_feasibility: + m_3_0_range + 45 n_3_0_range
+ - offset_3 + offset_0 = 0
+ offset_3_offset_1_feasibility: + m_3_1_range + 15 n_3_1_range
+ - offset_3 + offset_1 = 0
+ offset_3_offset_2_feasibility: + m_3_2_range + 45 n_3_2_range
+ - offset_3 + offset_2 = 0
+ offset_4_offset_0_feasibility: + m_4_0_range + 15 n_4_0_range
+ - offset_4 + offset_0 = 0
+ offset_4_offset_1_feasibility: + m_4_1_range + 30 n_4_1_range
+ - offset_4 + offset_1 = 0
+ offset_4_offset_2_feasibility: + m_4_2_range + 15 n_4_2_range
+ - offset_4 + offset_2 = 0
+ offset_4_offset_3_feasibility: + m_4_3_range + 15 n_4_3_range
+ - offset_4 + offset_3 = 0
+ offset_5_offset_0_feasibility: + m_5_0_range + 15 n_5_0_range
+ - offset_5 + offset_0 = 0
+ offset_5_offset_1_feasibility: + m_5_1_range + 15 n_5_1_range
+ - offset_5 + offset_1 = 0
+ offset_5_offset_2_feasibility: + m_5_2_range + 15 n_5_2_range
+ - offset_5 + offset_2 = 0
+ offset_5_offset_3_feasibility: + m_5_3_range + 15 n_5_3_range
+ - offset_5 + offset_3 = 0
+ offset_5_offset_4_feasibility: + m_5_4_range + 15 n_5_4_range
+ - offset_5 + offset_4 = 0
+
+Bounds
+ offset_0 = 0
+ 0 <= offset_1 <= 14
+ 0 <= offset_2 <= 44
+ 0 <= offset_3 <= 44
+ 0 <= offset_4 <= 29
+ 0 <= offset_5 <= 14
+ 2 <= m_1_0_range <= 7
+ 2 <= m_2_0_range <= 43
+ 8 <= m_2_1_range <= 13
+ 2 <= m_3_0_range <= 43
+ 8 <= m_3_1_range <= 13
+ 2 <= m_3_2_range <= 43
+ 2 <= m_4_0_range <= 10
+ 8 <= m_4_1_range <= 25
+ 2 <= m_4_2_range <= 10
+ 2 <= m_4_3_range <= 10
+ 2 <= m_5_0_range <= 0
+ 8 <= m_5_1_range <= 0
+ 2 <= m_5_2_range <= 0
+ 2 <= m_5_3_range <= 0
+ 5 <= m_5_4_range <= 0
+ -3 <= n_1_0_range <= 0
+ -1 <= n_2_0_range <= 0
+ -1 <= n_2_1_range <= 2
+ -1 <= n_3_0_range <= 0
+ -1 <= n_3_1_range <= 2
+ -1 <= n_3_2_range <= 0
+ -3 <= n_4_0_range <= 1
+ -1 <= n_4_1_range <= 0
+ -3 <= n_4_2_range <= 1
+ -3 <= n_4_3_range <= 1
+ -2 <= n_5_0_range <= 0
+ 0 <= n_5_1_range <= 0
+ -2 <= n_5_2_range <= 0
+ -2 <= n_5_3_range <= 0
+ -1 <= n_5_4_range <= 0
+
+Generals
+ n_1_0_range
+ n_2_0_range
+ n_2_1_range
+ n_3_0_range
+ n_3_1_range
+ n_3_2_range
+ n_4_0_range
+ n_4_1_range
+ n_4_2_range
+ n_4_3_range
+ n_5_0_range
+ n_5_1_range
+ n_5_2_range
+ n_5_3_range
+ n_5_4_range
+
+End

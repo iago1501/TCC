@@ -1,0 +1,145 @@
+#include "schedule.h"
+
+
+//___________________________________________________________________________________________________________
+//Programa Principal
+
+
+
+int main(int argc, char *argv[]){
+
+
+	if(argc != 3){
+		printf("Parâmetros de entrada insuficientes, digite o nome do arquivo de entrada e saída");
+		exit(1);
+	}
+
+	GList *list = NULL;
+
+	//long **gcds;
+
+	int num_tasks;
+
+	char *input_file_name = argv[1];
+	char *output_file_name = argv[2];
+
+
+	printf("-----------------------------------------------------\n\n");
+	printf("              Passando de XML Para Lista             \n\n");
+	printf("-----------------------------------------------------\n\n");
+
+	list = read_xml(input_file_name, g_list_first(list));
+	printf("-----------------------------------------------------\n\n");
+	print_list(list);
+	num_tasks = g_list_length(list);
+
+
+	printf("\n");
+	printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n");
+	printf("            Passando de Lista Para Vetor             \n\n");
+	printf(":::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n");
+
+	long period[num_tasks];
+	long wcet[num_tasks];
+	long offset[num_tasks];
+
+	tasklist_to_vet(g_list_first(list), period, wcet, offset);
+	printf("Period Vector:\t");
+	print_vector(period, sizeof(period)/sizeof(int));
+	printf("\n");
+	printf("Wcet   Vector:\t");
+	print_vector(wcet, sizeof(wcet)/sizeof(int));
+	printf("\n");
+	printf("Offset Vector:\t");
+	print_vector(offset, sizeof(offset)/sizeof(int));
+	printf("\n");
+
+
+
+	printf("\n");
+	printf("=====================================================\n\n");
+	printf("            Passando de Lista Para Vetor Task        \n\n");
+	printf("=====================================================\n\n");
+
+	task tasks[num_tasks];
+	tasklist_to_taskvet(list, tasks);
+	print_tasks_vector(tasks, sizeof(tasks)/sizeof(task));
+
+/*
+	printf("\n");
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+	printf("           Testando Matriz de GCD's		             \n\n");
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+
+	long gcds[num_tasks][num_tasks];
+
+	//allocate_gcds_matrix(&gcds, num_tasks);
+	init_gcds_matrix(&gcds, num_tasks, period);
+	print_matrix(gcds, num_tasks);
+	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+
+	printf("\n\n\n\n");
+*/
+
+// --- get start time ---
+	time_t raw_start_time;
+	time ( &raw_start_time );
+
+	long offsets[num_tasks];
+	exhaustive_schedule_algoritm(gcds, num_tasks, tasks, offsets);
+
+// --- get finish time ---
+	time_t raw_end_time;
+	time ( &raw_end_time );
+
+// calculate and print time elapsed
+	double rawtime_subtraction;
+	rawtime_subtraction = difftime( raw_end_time, raw_start_time);
+	printf("Time spent in seconds = %f\n\n",rawtime_subtraction);
+
+	printf("\n\n\n\n");
+	printf("Offsets escalonaveis:\t");
+	print_vector(offsets, num_tasks);
+	printf("\n\n\n\n");
+	write_xml(output_file_name, num_tasks, period, wcet, offsets);
+	is_valid_exit(period, wcet, offsets, num_tasks);
+
+
+//_____________________________________________________________________________________
+
+//								SECOND ALGORITHM
+//_____________________________________________________________________________________
+
+
+	printf("GLPK version: %s\n", glp_version());
+	int is_feasible;
+
+// --- get start time ---
+	time ( &raw_start_time );
+
+	//is_feasible = calculate_feasible_offsets_lp_bckt_2(tasks, num_tasks);
+	is_feasible = hrst1_calculate_feasible_offsets_lp_bckt_2(tasks, num_tasks);
+	//is_feasible = calculate_feasible_offsets_lp_2(tasks,num_tasks);
+
+	// --- get finish time ---
+	time ( &raw_end_time );
+
+	// calculate and print time elapsed
+	rawtime_subtraction = difftime( raw_end_time, raw_start_time);
+	printf("Time spent in seconds = %f\n\n",rawtime_subtraction);
+
+
+	//print result
+	if(is_feasible){
+		int i;
+		for(i = 0; i <= num_tasks - 1; i++){
+			printf("Offset[%d]=%ld\n", i, tasks[i].offset);
+		}
+	}else{
+		printf("Could not find a solution\n");
+	}
+
+	return 0;
+}
+
+

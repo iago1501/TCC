@@ -1,0 +1,42 @@
+!SESSION 2016-03-09 17:10:31.867 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_95
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-09 17:14:53.727
+!MESSAGE Indexed 'createperiodictasksets' (9 sources, 180 headers) in 6,40 sec: 11.593 declarations; 19.895 references; 9 unresolved inclusions; 0 syntax errors; 91 unresolved names (0,29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-09 17:14:55.321
+!MESSAGE Indexed 'perioricsched' (9 sources, 179 headers) in 1,58 sec: 11.559 declarations; 19.687 references; 8 unresolved inclusions; 0 syntax errors; 64 unresolved names (0,20%)
+
+!ENTRY org.eclipse.ui 2 2 2016-03-09 19:30:19.650
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2016-04-05 23:56:55.908 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_35
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-05 23:57:47.537
+!MESSAGE Indexed 'createperiodictasksets' (9 sources, 93 headers) in 5,15 sec: 6.781 declarations; 8.630 references; 42 unresolved inclusions; 0 syntax errors; 104 unresolved names (0,67%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-05 23:57:48.663
+!MESSAGE Indexed 'perioricsched' (9 sources, 94 headers) in 1,07 sec: 6.758 declarations; 8.514 references; 42 unresolved inclusions; 0 syntax errors; 104 unresolved names (0,68%)
+!SESSION 2016-04-06 17:31:33.729 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_95
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-06 17:33:25.537
+!MESSAGE Indexed 'createperiodictasksets' (9 sources, 180 headers) in 6,04 sec: 11.585 declarations; 19.829 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-06 17:33:27.547
+!MESSAGE Indexed 'perioricsched' (9 sources, 180 headers) in 1,89 sec: 11.562 declarations; 19.733 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+
+!ENTRY org.eclipse.ui 2 2 2016-04-06 17:33:50.258
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)

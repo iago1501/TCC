@@ -1,0 +1,90 @@
+Problem:    Find set of feasible offsets for each task
+Rows:       15
+Columns:    36 (15 integer, 0 binary)
+Non-zeros:  60
+Status:     INTEGER UNDEFINED
+Objective:  There is no optimization goal = 0 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 offset_1_offset_0_feasibility
+                                   0             0             = 
+     2 offset_2_offset_0_feasibility
+                                   0             0             = 
+     3 offset_2_offset_1_feasibility
+                                   0             0             = 
+     4 offset_3_offset_0_feasibility
+                                   0             0             = 
+     5 offset_3_offset_1_feasibility
+                                   0             0             = 
+     6 offset_3_offset_2_feasibility
+                                   0             0             = 
+     7 offset_4_offset_0_feasibility
+                                   0             0             = 
+     8 offset_4_offset_1_feasibility
+                                   0             0             = 
+     9 offset_4_offset_2_feasibility
+                                   0             0             = 
+    10 offset_4_offset_3_feasibility
+                                   0             0             = 
+    11 offset_5_offset_0_feasibility
+                                   0             0             = 
+    12 offset_5_offset_1_feasibility
+                                   0             0             = 
+    13 offset_5_offset_2_feasibility
+                                   0             0             = 
+    14 offset_5_offset_3_feasibility
+                                   0             0             = 
+    15 offset_5_offset_4_feasibility
+                                   0             0             = 
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 offset_0                    0             0             = 
+     2 offset_1                    0             0            14 
+     3 offset_2                    0             0            44 
+     4 offset_3                    0             0            44 
+     5 offset_4                    0             0            29 
+     6 offset_5                    0             0            14 
+     7 m_1_0_range                 0             2             7 
+     8 m_2_0_range                 0             2            43 
+     9 m_2_1_range                 0             8            13 
+    10 m_3_0_range                 0             2            43 
+    11 m_3_1_range                 0             8            13 
+    12 m_3_2_range                 0             2            43 
+    13 m_4_0_range                 0             2            10 
+    14 m_4_1_range                 0             8            25 
+    15 m_4_2_range                 0             2            10 
+    16 m_4_3_range                 0             2            10 
+    17 m_5_0_range                 0             2             0 
+    18 m_5_1_range                 0             8             0 
+    19 m_5_2_range                 0             2             0 
+    20 m_5_3_range                 0             2             0 
+    21 m_5_4_range                 0             5             0 
+    22 n_1_0_range  *              0            -3             0 
+    23 n_2_0_range  *              0            -1             0 
+    24 n_2_1_range  *              0            -1             2 
+    25 n_3_0_range  *              0            -1             0 
+    26 n_3_1_range  *              0            -1             2 
+    27 n_3_2_range  *              0            -1             0 
+    28 n_4_0_range  *              0            -3             1 
+    29 n_4_1_range  *              0            -1             0 
+    30 n_4_2_range  *              0            -3             1 
+    31 n_4_3_range  *              0            -3             1 
+    32 n_5_0_range  *              0            -2             0 
+    33 n_5_1_range  *              0             0             0 
+    34 n_5_2_range  *              0            -2             0 
+    35 n_5_3_range  *              0            -2             0 
+    36 n_5_4_range  *              0            -1             0 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 8.00e+00 on column 9
+        max.rel.err = 8.89e-01 on column 18
+        SOLUTION IS INFEASIBLE
+
+End of output

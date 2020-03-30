@@ -1,0 +1,96 @@
+18:20:42 **** Build of configuration Debug for project perioricsched ****
+make all 
+Building file: ../src/schedule/sched_data_types.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/sched_data_types.d" -MT"src/schedule/sched_data_types.d" -o "src/schedule/sched_data_types.o" "../src/schedule/sched_data_types.c"
+Finished building: ../src/schedule/sched_data_types.c
+ 
+Building file: ../src/schedule/sched_io.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/sched_io.d" -MT"src/schedule/sched_io.d" -o "src/schedule/sched_io.o" "../src/schedule/sched_io.c"
+Finished building: ../src/schedule/sched_io.c
+ 
+Building file: ../src/schedule/sched_memory_init.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/sched_memory_init.d" -MT"src/schedule/sched_memory_init.d" -o "src/schedule/sched_memory_init.o" "../src/schedule/sched_memory_init.c"
+Finished building: ../src/schedule/sched_memory_init.c
+ 
+Building file: ../src/schedule/sched_test.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/sched_test.d" -MT"src/schedule/sched_test.d" -o "src/schedule/sched_test.o" "../src/schedule/sched_test.c"
+Finished building: ../src/schedule/sched_test.c
+ 
+Building file: ../src/schedule/scheduler_exhaustive_search.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/scheduler_exhaustive_search.d" -MT"src/schedule/scheduler_exhaustive_search.d" -o "src/schedule/scheduler_exhaustive_search.o" "../src/schedule/scheduler_exhaustive_search.c"
+../src/schedule/scheduler_exhaustive_search.c: In function ‘exhaustive_schedule_algoritm’:
+../src/schedule/scheduler_exhaustive_search.c:97:2: warning: passing argument 1 of ‘init_gcds_matrix’ from incompatible pointer type [enabled by default]
+  init_gcds_matrix(&gcds, num_tasks, period);
+  ^
+In file included from ../src/schedule/sched_data_types.h:5:0,
+                 from ../src/schedule/scheduler_exhaustive_search.h:5,
+                 from ../src/schedule/scheduler_exhaustive_search.c:1:
+../src/schedule/sched_memory_init.h:30:6: note: expected ‘long int ***’ but argument is of type ‘long int (*)[(sizetype)(num_tasks)][(sizetype)(num_tasks)]’
+ void init_gcds_matrix(long ***gcds, int num_tasks, long *periods);
+      ^
+Finished building: ../src/schedule/scheduler_exhaustive_search.c
+ 
+Building file: ../src/schedule/scheduler_strict_period_lp.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/scheduler_strict_period_lp.d" -MT"src/schedule/scheduler_strict_period_lp.d" -o "src/schedule/scheduler_strict_period_lp.o" "../src/schedule/scheduler_strict_period_lp.c"
+Finished building: ../src/schedule/scheduler_strict_period_lp.c
+ 
+Building file: ../src/schedule/scheduler_strict_period_lp_bckt.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/scheduler_strict_period_lp_bckt.d" -MT"src/schedule/scheduler_strict_period_lp_bckt.d" -o "src/schedule/scheduler_strict_period_lp_bckt.o" "../src/schedule/scheduler_strict_period_lp_bckt.c"
+Finished building: ../src/schedule/scheduler_strict_period_lp_bckt.c
+ 
+Building file: ../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/schedule/scheduler_strict_period_lp_bckt_hrsts.d" -MT"src/schedule/scheduler_strict_period_lp_bckt_hrsts.d" -o "src/schedule/scheduler_strict_period_lp_bckt_hrsts.o" "../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c"
+In file included from ../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c:14:0:
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c: In function ‘hrst1_create_search_intervals’:
+../src/schedule/utlist.h:165:19: warning: variable ‘_tmp’ set but not used [-Wunused-but-set-variable]
+   LDECLTYPE(list) _tmp;                                                                        \
+                   ^
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c:273:3: note: in expansion of macro ‘DL_SORT’
+   DL_SORT(n_comb_set[task_index],cmp_interval_lengths);
+   ^
+../src/schedule/utlist.h:164:19: warning: variable ‘_ls_oldhead’ set but not used [-Wunused-but-set-variable]
+   LDECLTYPE(list) _ls_oldhead;                                                                 \
+                   ^
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c:273:3: note: in expansion of macro ‘DL_SORT’
+   DL_SORT(n_comb_set[task_index],cmp_interval_lengths);
+   ^
+../src/schedule/utlist.h:165:19: warning: variable ‘_tmp’ set but not used [-Wunused-but-set-variable]
+   LDECLTYPE(list) _tmp;                                                                        \
+                   ^
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c:282:3: note: in expansion of macro ‘DL_SORT’
+   DL_SORT(n_comb_set[task_index],- cmp_interval_lengths);
+   ^
+../src/schedule/utlist.h:164:19: warning: variable ‘_ls_oldhead’ set but not used [-Wunused-but-set-variable]
+   LDECLTYPE(list) _ls_oldhead;                                                                 \
+                   ^
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c:282:3: note: in expansion of macro ‘DL_SORT’
+   DL_SORT(n_comb_set[task_index],- cmp_interval_lengths);
+   ^
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c: In function ‘hrst1_find_solution’:
+Finished building: ../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c
+../src/schedule/scheduler_strict_period_lp_bckt_hrsts.c:318:6: warning: variable ‘simplex_status’ set but not used [-Wunused-but-set-variable]
+  int simplex_status; //for debugging purposes
+      ^
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: perioricsched
+Invoking: GCC C Linker
+gcc -L/home/rguerra/Dropbox/Dropbox/trabalho/pesquisa/Alunos/Iago/shared_iago/source_codes/workspaceC/perioricsched/lib -L/home/iago/Dropbox/shared_iago/source_codes/workspaceC/perioricsched/src -o "perioricsched"  ./src/schedule/sched_data_types.o ./src/schedule/sched_io.o ./src/schedule/sched_memory_init.o ./src/schedule/sched_test.o ./src/schedule/scheduler_exhaustive_search.o ./src/schedule/scheduler_strict_period_lp.o ./src/schedule/scheduler_strict_period_lp_bckt.o ./src/schedule/scheduler_strict_period_lp_bckt_hrsts.o  ./src/main.o   -lm -lglpk -lmxml -lglib-2.0
+/usr/bin/ld: ignorando /home/rguerra/Dropbox/Dropbox/trabalho/pesquisa/Alunos/Iago/shared_iago/source_codes/workspaceC/perioricsched/lib/libmxml.a incompatível ao procurar por -lmxml
+Finished building target: perioricsched
+ 
+
+18:20:43 Build Finished (took 1s.207ms)
+

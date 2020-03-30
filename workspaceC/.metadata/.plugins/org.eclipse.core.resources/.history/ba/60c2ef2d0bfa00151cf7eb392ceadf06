@@ -1,0 +1,51 @@
+#ifndef SCHEDULER_EXHAUSTIVE_SEARCH_H
+
+#define SCHEDULER_EXHAUSTIVE_SEARCH_H
+
+#include "sched_data_types.h"
+#include "sched_memory_init.h"
+#include "sched_io.h"
+
+
+//___________________________________________________________________________________________________________
+//min_Mij
+
+int min_m_ij(task Ti);
+
+//___________________________________________________________________________________________________________
+//max_Mij
+
+int max_m_ij(long gcd_ij, task Tj);
+
+//___________________________________________________________________________________________________________
+//min_Nij
+
+int min_n_ij(long gcd_ij, long offset, task Tj);
+
+//___________________________________________________________________________________________________________
+//max_Nij
+
+int max_n_ij(long gcd_jj, long gcd_ij, long offset, task Ti);
+
+//___________________________________________________________________________________________________________
+//Calcula Offset
+
+int get_offset(long gcd_ij, long offset, long n, long m);
+
+//___________________________________________________________________________________________________________
+//Valida conjunto de Offsets
+
+void remove_equivalent_offset(GList **valid, long gcd_jj);
+
+//___________________________________________________________________________________________________________
+//Gera Offsets
+
+void generate_offset(GList **generated_offsets, task taski, task taskj, long chosen_offset, long gcd_ij, long gcd_jj);
+
+//___________________________________________________________________________________________________________
+//schedule_algoritmo Principal
+
+void exhaustive_schedule_algoritm(int num_tasks, task *tasks, long *chosen_offsets);
+
+#endif
+

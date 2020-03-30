@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><Taskset><Task><ID>1</ID><Period>240</Period><Wcet>2</Wcet></Task><Task><ID>2</ID><Period>240</Period><Wcet>6</Wcet></Task><Task><ID>3</ID><Period>120</Period><Wcet>7</Wcet></Task><Task><ID>4</ID><Period>120</Period><Wcet>7</Wcet></Task><Task><ID>5</ID><Period>180</Period><Wcet>180</Wcet></Task></Taskset>

@@ -1,0 +1,13 @@
+18:19:44 **** Build of configuration Debug for project createperiodictasksets ****
+make all 
+Building file: ../src/createxml.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/home/rguerra/Dropbox/Dropbox/trabalho/pesquisa/Alunos/Iago/shared_iago/source_codes/workspaceC/perioricsched/src -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/home/iago/Dropbox/shared_iago/source_codes/workspaceC/perioricsched/src -I/usr/include/glib-2.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/createxml.d" -MT"src/createxml.d" -o "src/createxml.o" "../src/createxml.c"
+../src/createxml.c:3:40: fatal error: perioricsched/src/schedule.h: Arquivo ou diretório não encontrado
+ #include "perioricsched/src/schedule.h"
+                                        ^
+compilation terminated.
+make: ** [src/createxml.o] Erro 1
+
+18:19:45 Build Finished (took 106ms)
+
